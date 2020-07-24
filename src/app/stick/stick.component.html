@@ -1,0 +1,45 @@
+<div class="col">
+   <div class="card" >
+
+    <img [src]="stick.imgUrl" class="card-img-top" alt="people">
+    <div class="card-body">
+      <h5 class="post-category">
+       {{stick.category}}
+      </h5>
+      <h4 class="post-title" [ngStyle]="{
+          color: stick.stickTitle.length < 5 ? 'black' : 'green'
+          
+        }">
+      {{stick.stickTitle}}
+      </h4>
+      <!-- <p class="card-text" [ngClass]="{
+          red: textColor === 'red',
+          gray: textColor === 'gray',
+          green: textColor === 'green'
+        }" >{{stickText}}</p> -->
+        <p class="card-text" 
+        [class.red]="textColor === 'red'"
+        [class.gray]="textColor === 'gray'"
+        [class.green]="textColor === 'green'"
+           >{{stick.stickText}}</p>
+      
+          
+               <button class="btn btn-outline-secondary" (click)="changestickTitle()">Book this tour</button>
+      
+      <button class="btn btn-outline-secondary" (click)="stick.stickTitle = 'More than just a music festival'">Сancel</button>  
+     
+                <!-- <input type="text" #myInput (input)="inputHandler(myInput.value)" [value]="stickTitle"> -->
+                <button class="btn btn-outline-secondary" (click)="textColor ='red'">Set red</button>
+                <button class="btn btn-outline-secondary" (click)="textColor ='gray'">Set gray</button>
+                <button class="btn btn-outline-secondary" (click)="textColor ='green'">Set green</button>
+        <input type="text" [(ngModel)]="stick.stickTitle" (ngModelCange)="changeHandler()">
+                
+        
+     
+    </div>
+   
+   
+  </div> 
+</div>
+
+

@@ -1,0 +1,39 @@
+.row{
+    margin: 0 auto;
+    float: left;
+}
+
+ .card-body{
+    
+        margin: 1rem;
+    }
+.card-text{
+    font-style: italic;
+    &.red{
+        color: red;
+    }
+    &.gray{
+        color: gray;
+    }
+    &.green{
+        color: green;
+    }
+}
+.btn{
+    margin-bottom: 1rem;
+}
+.btn+.btn{
+    margin-right: 1rem;
+    
+}
+.grid-posts{
+ display: flex;
+ flex-direction: row;
+}
+.row{
+    flex-direction: row;
+}
+.card{
+    margin-bottom: 2rem;
+  
+}
